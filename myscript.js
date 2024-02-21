@@ -25,8 +25,17 @@ squares.forEach(e => e.addEventListener('mouseover', (event) => {
     event.target.style.backgroundColor = 'blue';
 }));}
 
+function removeSquares() {
+    document.querySelectorAll('div.squareClass').forEach(e => e.remove());
+}
+
+getUserInput();
+createGrid(userInputSquared);
+changeSquares();
+
 document.addEventListener('click', (event) => {
     if (event.target.className == 'button') {
+        removeSquares();
         getUserInput();
         createGrid(userInputSquared);
         changeSquares();
