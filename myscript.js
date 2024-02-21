@@ -1,14 +1,20 @@
 div = document.getElementById('container');
 
-userInput = prompt('Pick a number');
+let userInput = prompt('Pick a number');
 
-userInputSquared = userInput * userInput;
+let userInputSquared = userInput * userInput;
+let squareSize = userInputSquared / 100;
 
 for (let i = 0; i < userInputSquared; i++) {
-    square = document.createElement('div');
+    let square = document.createElement('div');
     div.appendChild(square);
-    square.style.flex = '1 1 20%';
+    square.style.flex = '1 1 0';
     square.className = 'squareClass';
-    square.style.backgroundColor = 'blue';
-
+    square.style.backgroundColor = 'grey';
 }
+
+const squares = document.querySelectorAll('div.squareClass');
+
+squares.forEach(e => e.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = 'blue';
+}));
