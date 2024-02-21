@@ -5,7 +5,7 @@ let userInputSquared;
 function getUserInput() {
     do {    
         userInput = prompt('Pick a number 1-100');
-    } while (userInput.isNaN || userInput > 100 || userInput < 0); 
+    } while (userInput > 100 || userInput < 1 || isNaN(userInput)); 
     userInputSquared = userInput * userInput;
     return userInputSquared
 }
