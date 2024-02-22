@@ -4,6 +4,9 @@
     height: 800px;
     width: 800px;
     margin: auto;
+    padding: 30px;
+    background-color: red;
+    border-radius: 5%;
 }
 
 .button  {
